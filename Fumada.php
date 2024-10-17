@@ -11,6 +11,7 @@
     $a = 'a';
     $b = $a;
     $c = $b;
+    $d = $c;
 
     echo $a . "<br>";
     echo $$b . "<br>";
