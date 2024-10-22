@@ -11,13 +11,13 @@
     <?php 
     
     $articulos = array(
-        "Teclado", 58,
-        "Raton", 32,
-        "Impresora", 185,
-        "Altavoz", 62,
-        "Auriculares", 36,
-        "Monitor", 102,
-        "Webcam", 47
+        ["Teclado", 58],
+        ["Raton", 32],
+        ["Impresora", 185],
+        ["Altavoz", 62],
+        ["Auriculares", 36],
+        ["Monitor", 102],
+        ["Webcam", 47]
     );
 
     echo "<hr>";
@@ -25,66 +25,48 @@
     echo "<hr>";
 
     echo "<table>";
+    echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($articulos); $i++){
-        if ($i %2 == 0){
-            echo "<tr><td>" . $articulos[$i] . "</td>";
-        } else{
-                echo "<td>". $articulos[$i] ."</td></tr>";
-        }
+        echo "<tr><td>" . $articulos[$i][0] . "</td>";
+        echo "<td>" . $articulos[$i][1] . "</td></tr>";
     }
-
     echo "</table> <br>";
 
     $art_original = array_merge($articulos); 
     
     echo "<table>";
+    echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($art_original); $i++){
-        if ($i %2 == 0){
-            echo "<tr><td>" . $art_original[$i] . "</td>";
-        } else{
-                echo "<td>". $art_original[$i] ."</td></tr>";
-        }
+        echo "<tr><td>" . $articulos[$i][0] . "</td>";
+        echo "<td>" . $articulos[$i][1] . "</td></tr>";
     }
-
     echo "</table> <br>";
 
-    for ($i = 1; $i < count($articulos); $i += 2) {
-        if ($articulos[$i] > 50) {
-            array_splice($articulos, $i - 1, 2);
-            $i -= 2;
+    for ($i = 0; $i < count($articulos); $i++) {
+        if ($articulos[$i][1] > 50) {
+            array_splice($articulos, $i, 1);
+            $i--;
         }
     }
 
     echo "<table>";
+    echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($articulos); $i++){
-        if ($i %2 == 0){
-            echo "<tr><td>" . $articulos[$i] . "</td>";
-        } else{
-                echo "<td>". $articulos[$i] ."</td></tr>";
-        }
+        echo "<tr><td>" . $articulos[$i][0] . "</td>";
+        echo "<td>" . $articulos[$i][1] . "</td></tr>";
     }
-
     echo "</table> <br>";
-    for ($i = 1; $i < count($articulos); $i += 2) {
-        $articulos[$i] = $articulos[$i] * 1.15;
-    }
 
     $art_actual = array_merge($art_original);
 
     echo "<table>";
+    echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($art_actual); $i++){
-        if ($i == 0){
-            echo "<tr><td>" . $art_actual[$i] . "</td>";    
-        }
-        elseif($i % 2 != 0){
-            if ($art_actual[$i] < 50) {
-                $art_actual[$i] = $art_actual[$i] * 1.15;
-                echo "<td>" . $art_actual[$i] . "</td></tr>"; 
-            } else {
-                echo "<td>". $art_actual[$i] ."</td></tr>";
-            }
-        } else{
-                echo "<tr><td>". $art_actual[$i] ."</td>";
+        echo "<tr><td>" . $art_actual[$i][0] . "</td>";
+        if ($art_actual[$i][1] < 50) {
+            echo "<td>" . $art_actual[$i][1]*1.15 . "</td></tr>";
+        } else {
+            echo "<td>" . $art_actual[$i][1] . "</td></tr>";
         }
     }
     echo "</table> <br>";
