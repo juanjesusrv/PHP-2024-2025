@@ -68,7 +68,7 @@
             echo "<td>" . $art_actual[$i][1] . "</td></tr>";
         }
     }
-    echo "</table> <br>";
+    echo "</table> <br >";
 
     echo var_export($art_actual);
     ?>
