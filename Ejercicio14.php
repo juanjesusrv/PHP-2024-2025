@@ -33,14 +33,6 @@
     echo "</table> <br>";
 
     $art_original = array_merge($articulos); 
-    
-    echo "<table>";
-    echo "<tr><td>Artículo</td><td>Precio</td></tr>";
-    for ($i = 0; $i < count($art_original); $i++){
-        echo "<tr><td>" . $articulos[$i][0] . "</td>";
-        echo "<td>" . $articulos[$i][1] . "</td></tr>";
-    }
-    echo "</table> <br>";
 
     for ($i = 0; $i < count($articulos); $i++) {
         if ($articulos[$i][1] > 50) {
