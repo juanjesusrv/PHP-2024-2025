@@ -19,12 +19,32 @@
 
 
 $array1 = [1, 2, 3, 4, 5];
-$array2 = [6, 7, 8, 9, 10];
+$array2 = [1, 2, 3, 4, 5];
+
 $array3 = array_merge($array1, $array2);
 
 for ($i = 0; $i < count($array3); $i++) {
     echo $array3[$i];
 }
+echo "<br>";
+
+echo var_export($array3, true);
+$array3 = array_unique($array3);
+echo "<br>";
+echo var_export($array3, true);
+
+echo "<br>";
+for ($i = 0; $i < count($array3); $i++) {
+    echo $array3[$i];
+}
+echo "<br>";
+
+
+function suma($nombre = "Pedro") {
+    return "Hola " . $nombre;
+}
+
+echo suma();
 
     
     ?>
