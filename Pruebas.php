@@ -15,7 +15,16 @@
 
     echo $a . "<br>";
     echo $$b . "<br>";
-    echo $$$c;
+    echo $$$c . "<br>";
+
+
+$array1 = [1, 2, 3, 4, 5];
+$array2 = [6, 7, 8, 9, 10];
+$array3 = array_merge($array1, $array2);
+
+for ($i = 0; $i < count($array3); $i++) {
+    echo $array3[$i];
+}
 
     
     ?>

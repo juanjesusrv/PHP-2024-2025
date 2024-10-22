@@ -1,0 +1,84 @@
+array_push: Para añadir al final del array uno o varios valores
+    array_push($array, valor1, valor2)
+
+array_pop: Para eliminar el último elemento del array
+    array_pop($array)
+
+array_shift: Para eliminar el primer elemento del array
+    array_shift($array)
+
+array_unshift: Para añadir uno o varios elementos al principio del array
+    array_unshift($array, valor1, valor2)
+
+array_slice: Para extraer una parte del array
+    array_slice($array, inicio, longitud)
+
+array_splice: Para añadir o eliminar elementos de un array
+    array_splice($array, inicio, longitud, array_a_insertar)
+
+array_merge: Para unir dos o más arrays
+    array_merge($array1, $array2)
+
+array_search: Para buscar un valor en un array y devolver su índice
+    array_search($valor, $array)
+
+array_keys: Para obtener las claves de un array
+    array_keys($array)
+
+array_values: Para obtener los valores de un array
+    array_values($array)
+
+array_reverse: Para invertir el orden de los elementos de un array
+    array_reverse($array)
+
+array_unique: Para eliminar los valores duplicados de un array
+    array_unique($array)
+
+array_flip: Para intercambiar las claves por los valores y los valores por las claves
+    array_flip($array)
+
+array_rand: Para obtener una o varias claves aleatorias de un array
+    array_rand($array, numero_de_claves)
+
+array_sum: Para sumar los valores de un array
+    array_sum($array)
+
+array_product: Para multiplicar los valores de un array
+    array_product($array)
+
+array_map: Para aplicar una función a cada uno de los elementos de un array
+    array_map($funcion, $array)
+
+array_filter: Para filtrar los elementos de un array
+    array_filter($array, $funcion)
+
+array_reduce: Para reducir los elementos de un array a un solo valor
+    array_reduce($array, $funcion)
+
+array_walk: Para aplicar una función a cada uno de los elementos de un array
+    array_walk($array, $funcion)
+
+array_walk_recursive: Para aplicar una función a cada uno de los elementos de un array, incluidos los arrays anidados
+    array_walk_recursive($array, $funcion)
+
+array_count_values: Para contar cuántas veces se repite cada valor en un array
+    array_count_values($array)
+
+array_column: Para extraer los valores de una columna de un array de arrays
+    array_column($array, columna)
+
+array_chunk: Para dividir un array en arrays más pequeños
+    array_chunk($array, tamaño)
+
+array_fill: Para rellenar un array con un valor
+    array_fill(inicio, longitud, valor)
+
+array_fill_keys: Para rellenar un array con valores a partir de las claves 
+    array_fill_keys($array, valor)
+
+array_key_exists: Para comprobar si una clave existe en un array
+    array_key_exists(clave, $array)
+
+in_array: Para comprobar si un valor existe en un array
+    in_array(valor, $array)
+
