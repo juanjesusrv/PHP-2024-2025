@@ -24,6 +24,7 @@
     echo var_export($articulos, true);
     echo "<hr>";
 
+    // Mostramos los artículos con su precio
     echo "<table>";
     echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($articulos); $i++){
@@ -32,8 +33,10 @@
     }
     echo "</table> <br>";
 
+    // Copiamos el array original para no modificarlo
     $art_original = array_merge($articulos); 
 
+    // Eliminamos los artículos con un precio mayor a 50
     for ($i = 0; $i < count($articulos); $i++) {
         if ($articulos[$i][1] > 50) {
             array_splice($articulos, $i, 1);
@@ -41,6 +44,7 @@
         }
     }
 
+    // Mostramos los artículos si es menor a 50 euros
     echo "<table>";
     echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($articulos); $i++){
@@ -49,14 +53,17 @@
     }
     echo "</table> <br>";
 
+    // Copiamos el array original para no modificarlo
     $art_actual = array_merge($art_original);
 
+
+    // Aumentamos un 15% a los artículos con un precio menor a 50 euros
     echo "<table>";
     echo "<tr><td>Artículo</td><td>Precio</td></tr>";
     for ($i = 0; $i < count($art_actual); $i++){
         echo "<tr><td>" . $art_actual[$i][0] . "</td>";
         if ($art_actual[$i][1] < 50) {
-            echo "<td>" . $art_actual[$i][1]*1.15 . "</td></tr>";
+            echo "<td style='color: red;'>" . $art_actual[$i][1]*1.15 . "</td></tr>";
         } else {
             echo "<td>" . $art_actual[$i][1] . "</td></tr>";
         }
