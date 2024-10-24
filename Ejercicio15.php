@@ -23,7 +23,8 @@
     
     try {
 
-        $indice = 9;
+        $indice = 0;
+        
         if ($indice < 0 || $indice >= count($articulos)) {
             throw new Exception("El indice introducido no es valido.");
         } else {
