@@ -34,7 +34,6 @@
     }
 
     $aleatorios = array_aleatorio(10, 1, 100);
-
     echo "<h2><u>Array original</u></h2>";
     foreach ($aleatorios as $key => $value) {
         if ($value % 2 == 0) {
