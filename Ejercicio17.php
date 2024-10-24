@@ -33,7 +33,7 @@
             echo "<tr><td>Artículo</td><td>Precio</td></tr><tr><td>----------</td><td>--------</td></tr>";
             for ($i = 0; $i < count($articulos); $i++){
                 echo "<tr><td>" . $articulos[$i][0] . "</td>";
-                echo "<td>" . $articulos[$i][1] . "</td></tr>";
+                echo "<td style=\" text-align: center;\">" . $articulos[$i][1] . "</td></tr>";
             }
             echo "</table> <br>";
         }
