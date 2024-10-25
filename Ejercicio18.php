@@ -16,59 +16,60 @@
 $palabras = array("Radar", "Animal", "Periquito", "Reconocer", "Aula");
 
 //Función para comprobar si la palabra es palíndroma usando strrev
-function palindromo1($palabra){
-    $palabra = strtolower($palabra); //Convertimos la palabra a minúsculas
-    $palabra = str_replace(" ", "", $palabra); //Eliminamos los espacios
-    $palabraInvertida = strrev($palabra); //Invertimos la palabra
-    
-    if ($palabra == $palabraInvertida){ //Comparamos la palabra original con la invertida
-        return "Si";
-    } else {
-        return "No";
+function palindromo1(array $palabras){
+
+    echo "<table>";
+    for ($i = 0; $i < count($palabras); $i++) {
+        $palabras[$i] = strtolower($palabras[$i]); //Convertimos la palabra a minúsculas
+        $palabras[$i] = str_replace(" ", "", $palabras[$i]); //Eliminamos los espacios
+        $palabraInvertida[] = strrev($palabras[$i]); //Invertimos la palabra
     }
+
+    for ($i = 0; $i < count($palabras); $i++) {
+        echo "<tr><td>¿Es ".$palabras[$i]." una palabra palíndromo ? </td>";
+        if ($palabras[$i] == $palabraInvertida[$i]){ //Comparamos la palabra original con la invertida
+            echo "<td style=\"color: green;\">Si</td></tr>";
+        } else {
+            echo "<td style=\"color: red;\">No</td></tr>";
+        }
+    }
+
+    echo "</table> <br>";
 }
 
 //Función para comprobar si la palabra es palíndroma sin usar strrev
-function palindromo2($palabra){
-    $palabra = strtolower($palabra); //Convertimos la palabra a minúsculas
-    $palabra = str_replace(" ", "", $palabra); //Eliminamos los espacios
-    $palabraInvertida = "";
-    
-    for ($i = strlen($palabra) - 1; $i >= 0; $i--){ //Recorremos la palabra de atrás hacia adelante
-        $palabraInvertida .= $palabra[$i]; //Vamos añadiendo las letras al revés
+function palindromo2(array $palabras){
+
+    echo "<table>";
+    for ($i = 0; $i < count($palabras); $i++) {
+        $palabras[$i] = strtolower($palabras[$i]); //Convertimos la palabra a minúsculas
+        $palabras[$i] = str_replace(" ", "", $palabras[$i]); //Eliminamos los espacios
+        $aux = ""; // Inicializamos la variable auxiliar
+
+        for ($j = strlen($palabras[$i]) - 1; $j >= 0; $j--) {
+            $aux .= substr($palabras[$i], $j, 1); //Extraemos las letras y las añadimos a aux
+        }
+
+        $palabraInvertida[] = $aux; 
+        $aux = ""; //Vaciamos la variable auxiliar
     }
-    
-    if ($palabra == $palabraInvertida){ //Comparamos la palabra original con la invertida
-        return "La palabra $palabra es palíndroma";
-    } else {
-        return "La palabra $palabra no es palíndroma";
+
+    for ($i = 0; $i < count($palabras); $i++) {
+        echo "<tr><td>¿Es ".$palabras[$i]." una palabra palíndromo ? </td>";
+        if ($palabras[$i] == $palabraInvertida[$i]){ //Comparamos la palabra original con la invertida
+            echo "<td style=\"color: green;\">Si</td></tr>";
+        } else {
+            echo "<td style=\"color: red;\">No</td></tr>";
+        }
     }
 }
-
-
 // Mostramos el resultado usando la función palindromo1
-echo "<table>";
-for ($i = 0; $i < count($palabras); $i++) {
-    echo "<tr><td>¿Es ".$palabras[$i]." una palabra palíndromo ? </td>";
-    if (palindromo1($palabras[$i]) == "Si"){
-        echo "<td style=\"color: green;\">" .palindromo1($palabras[$i])."</td></tr>";
-    } else {
-        echo "<td style=\"color: red;\">" .palindromo1($palabras[$i])."</td></tr>";
-    }
-}
-echo "</table> <hr>";
+
+palindromo1($palabras);
 
 // Mostramos el resultado usando la función palindromo2
-echo "<table>";
-for ($i = 0; $i < count($palabras); $i++) {
-    echo "<tr><td>¿Es ".$palabras[$i]." una palabra palíndromo ? </td>";
-    if (palindromo1($palabras[$i]) == "Si"){
-        echo "<td style=\"color: green;\">" .palindromo1($palabras[$i])."</td></tr>";
-    } else {
-        echo "<td style=\"color: red;\">" .palindromo1($palabras[$i])."</td></tr>";
-    }
-}
-echo "</table> <br>";
+
+palindromo2($palabras);
 
 
 
