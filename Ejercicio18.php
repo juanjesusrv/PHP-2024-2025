@@ -71,12 +71,10 @@ palindromo1($palabras);
 
 palindromo2($palabras);
 
-
-
-
 ?>
 
 <hr>
+
 <h3>Juan Jesús Rivillas Canalejo - 2º DAW</h3>
 
 
