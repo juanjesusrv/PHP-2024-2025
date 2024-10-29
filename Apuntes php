@@ -1,3 +1,8 @@
+Apuntes PHP --
+
+Todas las funciones de arrays en PHP
+------------------------------------
+
 array_push: Para añadir al final del array uno o varios valores
     array_push($array, valor1, valor2)
 
@@ -81,4 +86,97 @@ array_key_exists: Para comprobar si una clave existe en un array
 
 in_array: Para comprobar si un valor existe en un array
     in_array(valor, $array)
+
+--------------------------------------------------------------------
+
+Todas las funciones de strings en PHP
+-------------------------------------
+
+strlen: Para obtener la longitud de una cadena
+    strlen($cadena)
+
+substr: Para extraer una parte de una cadena
+    substr($cadena, inicio, longitud)
+
+strtoupper: Para convertir una cadena a mayúsculas
+    strtoupper($cadena)
+
+strtolower: Para convertir una cadena a minúsculas
+    strtolower($cadena)
+
+ucfirst: Para convertir a mayúscula el primer carácter de una cadena
+    ucfirst($cadena)
+
+lcfirst: Para convertir a minúscula el primer carácter de una cadena
+    lcfirst($cadena)
+
+ucwords: Para convertir a mayúscula el primer carácter de cada palabra de una cadena
+    ucwords($cadena)
+
+strrev: Para invertir una cadena
+    strrev($cadena)
+
+str_repeat: Para repetir una cadena un número determinado de veces
+    str_repeat($cadena, numero_de_repeticiones)
+
+str_replace: Para reemplazar una subcadena por otra en una cadena
+    str_replace(subcadena, reemplazo, $cadena)
+
+str_ireplace: Para reemplazar una subcadena por otra en una cadena, ignorando mayúsculas y minúsculas
+    str_ireplace(subcadena, reemplazo, $cadena)
+
+str_split: Para dividir una cadena en un array de caracteres
+    str_split($cadena)
+
+explode: Para dividir una cadena en un array a partir de un delimitador
+    explode(delimitador, $cadena)
+
+implode: Para unir los elementos de un array en una cadena
+    implode(separador, $array)
+
+empty: Para comprobar si una cadena está vacía
+    empty($cadena)
+
+trim: Para eliminar los espacios en blanco al principio y al final de una cadena
+    trim($cadena)
+
+ltrim: Para eliminar los espacios en blanco al principio de una cadena
+    ltrim($cadena)
+
+rtrim: Para eliminar los espacios en blanco al final de una cadena
+    rtrim($cadena) 
+
+str_pad: Para rellenar una cadena con un número determinado de caracteres
+    str_pad($cadena, longitud, relleno) 
+
+str_shuffle: Para mezclar los caracteres de una cadena
+    str_shuffle($cadena)
+
+str_word_count: Para contar el número de palabras de una cadena
+    str_word_count($cadena)
+
+strcasecmp: Para comparar dos cadenas, ignorando mayúsculas y minúsculas
+    strcasecmp(cadena1, cadena2)
+
+strcmp: Para comparar dos cadenas, teniendo en cuenta mayúsculas y minúsculas
+    strcmp(cadena1, cadena2)
+
+stristr: Para buscar la primera aparición de una subcadena en una cadena, ignorando mayúsculas y minúsculas
+    stristr($cadena, subcadena)
+
+strstr: Para buscar la primera aparición de una subcadena en una cadena
+    strstr($cadena, subcadena)
+
+substr_count: Para contar el número de apariciones de una subcadena en una cadena
+    substr_count($cadena, subcadena)
+
+strcspn: Para buscar la longitud del segmento inicial de una cadena que no contiene un conjunto de caracteres
+    strcspn($cadena, caracteres)
+
+strpbrk: Para buscar la primera aparición en una cadena de cualquiera de un conjunto de caracteres
+    strpbrk($cadena, caracteres)
+
+    
+
+
 
