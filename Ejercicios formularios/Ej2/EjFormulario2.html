@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario (2)</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body >
+
+    <div style="margin-left: 10%; margin-right: 10%; text-align: center;">
+        <h1>CENTRO DE ESTUDIOS</h1>
+        <img src="./imagenes/imagen1.PNG" alt="imagen de rechazo" width="100" height="100">
+        <img src="./imagenes/AVANZA.PNG" alt="imagen de rechazo" width="400" height="100">
+        <img src="./imagenes/imagen1.PNG" alt="imagen de rechazo" width="100" height="100">
+
+        <h2><u>IDENTIFICACIÓN</u></h2>
+
+        <table>
+            <tr>
+            <td><label for="TipoDocumento">Tipo de documento: </label></td>
+                <td>
+                    <input type="radio" name="TipoDocumento" value="DNI" id="DNI" required>
+                    <label for="DNI">DNI</label>
+                    <input type="radio" name="TipoDocumento" value="NIE" id="NIE" required>
+                    <label for="NIE">NIE</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Documento">Documento: </label></td>
+                <td><input type="text" name="Documento" id="Documento" required></td>
+            </tr>
+            <tr>
+                <td><label for="NombreApellidos">Nombre y apellidos: </label></td>
+                <td><input type="text" name="NombreApellidos" id="NombreApellidos" style="width: 50%;" required></td>
+            </tr>
+            <tr>
+                <td><label for="Telefono">Teléfono de contacto: </label></td>
+                <td><input type="tel" name="Telefono" id="Telefono" required></td>
+            </tr>
+        </table>
+
+        <h2><u>CURSOS DISPONIBLES</u></h2>
+            <select name="Cursos" id="Cursos" required>
+                <option value="0">.....</option>
+                <option value="1">Programación Android</option>
+                <option value="2">Inteligencia Artificial</option>
+                <option value="3">Iniciacion al BIGDATA</option>
+                <option value="4">Posicionamiento SEO</option>
+            </select>
+
+        <h2><u>ELEGIR OPCIONES</u></h2>
+        <table>
+            <tr>
+                <td><label for="Matricula"><u>Matrícula</u></label></td>
+                <td><label for="Turno"><u>Turno</u></label></td>
+                <td><label for="Modalidad"><u>Modalidad</u></label></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="Modalidad" value="Completo" id="Completo" required>
+                    <label for="Completo">Completo</label>
+                </td>
+                
+                <td>
+                    <input type="radio" name="Turno" value="Mañana" id="Mañana" required>
+                    <label for="Mañana">Mañana</label>
+                </td>
+                
+                <td>
+                    <input type="radio" name="Matricula" value="Presencial" id="Presencial" required>
+                    <label for="Presencial">Presencial</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="Modalidad" value="Parcial" id="Parcial" required>
+                    <label for="Parcial">Parcial</label>
+                </td>
+                
+                <td>
+                    <input type="radio" name="Turno" value="Tarde" id="Tarde" required>
+                    <label for="Tarde">Tarde</label>
+                </td>
+                
+                <td>
+                    <input type="radio" name="Matricula" value="Semipresencial" id="Semipresencial" required>
+                    <label for="Semipresencial">Semipresencial</label>
+                </td>
+        </table>
+
+        <hr>
+
+        <h2><u>NUESTRAS AULAS</u></h2>
+        <img src="./imagenes/aula1.PNG" alt="imagen de rechazo" width="250" height="250">
+        <img src="./imagenes/aula2.PNG" alt="imagen de rechazo" width="250" height="250">
+    </div>
+</body>
+</html>

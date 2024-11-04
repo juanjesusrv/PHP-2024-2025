@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario (1)</title>
+</head>
+<body>
+    <h1>"TECNOLOGÍA DOMÓTICA"</h1>
+    <img src="./imagenes/aaa.jpeg" alt="imagen de la empresa" width="200" height="200">
+    <img src="imagenes/bbb.png" alt="imagen de la empresa" width="200" height="200">
+    <h3>Oferta de subscripción durante un año</h3>
+
+    <h4>Precios hasta el 15 de diciembre</h4>
+
+    <ul>
+        <li>Subscripción mensual .................... 4.5€ al mes</li>
+        <li>Subscripción semestral .................. 25.00€ al semestre</li>
+        <li>Subscripción anual ...................... 50.00€ al semestre</li>
+    </ul>
+
+    <h3>Formulario de subscripción</h3>
+    <form action="EjFormulario1.php" method="post">
+        <label for="nombre"">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="FNacimiento"">F.Nac.:</label>
+        <input type="date" name="FNacimiento" id="FNacimiento" required>
+
+        <label for="DNI"">DNI:</label>
+        <input type="text" name="DNI" id="DNI" required>
+        <br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" required>
+
+        <br>
+
+        <label for="CalleNumero"">Calle y número:</label>
+        <input type="text" name="CalleNumero" id="CalleNumero" required>
+
+        <br>
+
+        <label for="cp">Código Postal:</label>
+        <input type="text" name="cp" id="cp" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" name="ciudad" id="ciudad" required>
+
+        <br>
+
+        <label for="provincia">Provincia:</label>
+        <input type="text" name="provincia" id="provincia" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" name="telefono" id="telefono" required>
+
+        <br>
+        
+        <label for="subscripcion">Opción:</label>
+        <select name="subscripcion" id="subscripcion" required>
+            <option value="mensual">Mensual</option>
+            <option value="semestral">Semestral</option>
+            <option value="anual">Anual</option>
+        </select>
+
+        <br>
+
+        <label for="FormaPago">Forma de pago:</label>
+        <input type="radio" name="FormaPago" value="tarjeta" id="tarjeta" required>
+        <label for="tarjeta">Tarjeta de credito</label>
+        <input type="radio" name="FormaPago" value="PayPal" id="PayPal" required>
+        <label for="domiciliacion">PayPal</label>
+        <input type="radio" name="FormaPago" value="Bizum" id="Bizum" required>
+        <label for="Bizum">Bizum</label>
+
+        <br>
+
+        <label for="Comentarios">Comentarios:</label>
+        <textarea name="Comentarios" id="Comentarios"></textarea>
+
+        <br><br>
+
+        <label for="aceptar">Pulse para verificar</label>
+        <input type="image" src="imagenes/ccc.png" alt="imagen de verificación" width="20" height="20" name="aceptar" id="aceptar">
+
+        <br>
+        
+        <label for="rechazar">
+            <input type="image" src="imagenes/ddd.jpeg" alt="imagen de rechazo" width="20" height="20" name="rechazar" id="rechazar">
+            Anular
+        </label>
+
+        <br>
+    </form>
+
+</body>
+</html>
